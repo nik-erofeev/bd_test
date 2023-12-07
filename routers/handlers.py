@@ -5,10 +5,10 @@ from starlette import status
 from crud.crud import get_products_with_latest_price
 from db.database import get_db
 
-router = APIRouter()
+router = APIRouter(tags=["Test"])
 
 
-@router.get("/", response_model=list[dict])
+@router.get("/", summary="получение товаров", description="получение товаров с новой ценой", response_model=list[dict])
 async def read_product(db: Session = Depends(get_db)):
     result = get_products_with_latest_price(db)
 

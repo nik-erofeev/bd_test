@@ -1,10 +1,9 @@
+import random
+
 from sqlalchemy.orm import Session
 
 from db.database import SessionLocal
 from models.models import City, Category, Feature, Price, Product, PriceType
-
-
-import random
 
 
 def insert_data(db: Session):

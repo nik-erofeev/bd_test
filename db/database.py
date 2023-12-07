@@ -3,7 +3,6 @@ from sqlalchemy.orm import sessionmaker, DeclarativeBase
 
 from config import SQLALCHEMY_DATABASE
 
-
 DATABASE_URL = SQLALCHEMY_DATABASE
 
 

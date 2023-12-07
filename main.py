@@ -3,7 +3,7 @@ from fastapi import FastAPI
 
 from routers.handlers import router
 
-app = FastAPI()
+app = FastAPI(title="Test", version="1.1")
 
 
 app.include_router(router)
