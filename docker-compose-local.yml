@@ -1,0 +1,12 @@
+version: "3.0"
+services:
+  db:
+    container_name: "test_db_postgres"
+    image: postgres:16-bullseye
+    restart: always
+    environment:
+      - POSTGRES_USER=postgres1
+      - POSTGRES_PASSWORD=postgres1
+      - POSTGRES_DB=postgres1
+    ports:
+      - "5432:5432"
